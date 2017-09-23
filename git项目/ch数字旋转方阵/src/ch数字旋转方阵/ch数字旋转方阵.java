@@ -57,12 +57,22 @@ public class ch数字旋转方阵 {
         	v--;
         	d++;
         }
-        t(a,b+1,s-2,d); 
+        t(a,b+1,s-1,d); 
     }  
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 int h,v,b,p,s,d,n;  
 	        Scanner in=new Scanner(System.in);  
+	        b=1;s=6;d=1;  
+            t(a,b,s,d); 
+            for(h=1;h<=6;h++)   
+            {
+            	for(v=1;v<=6;v++) 
+            	{
+            		System.out.print(a[h][v]+"\t");  
+            	}
+            		System.out.println();
+            }  
 	        System.out.println("请输入n的值（4-10）:");
 	        n=in.nextInt(); 
 	        if(n>3 & n<11)

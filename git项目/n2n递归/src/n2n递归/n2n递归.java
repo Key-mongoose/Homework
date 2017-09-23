@@ -35,7 +35,6 @@ public class n2n递归 {
 	 * @created 2017年9月23日 下午2:19:34     
 	 * @param args     
 	 */
-	private  int num;
 	public static void Num(int a){
 			if (a <= 0)
 			{
@@ -47,16 +46,19 @@ public class n2n递归 {
 				Num(2*a);
 				System.out.println(a);
 			}
-			if(a/2 > 5000 & a >0)
-			{
-				System.out.println(a/2);
-			}
 		}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner in =new Scanner(System.in);
 		System.out.println("请输入整数 n(0-5000)：");
 		int n = in.nextInt();
-		Num(n);
+		if(n > 5000)
+		{
+			System.out.println("输入的n不符合条件！！");
+		}
+		else 
+		{
+			Num(n);
+		}
 	}
 }
